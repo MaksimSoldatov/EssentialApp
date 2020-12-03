@@ -80,7 +80,3 @@ private class FeedItemsMapper {
         return try JSONDecoder().decode(Root.self, from: data).items.map { $0.item }
     }
 }
-
-
-
-
