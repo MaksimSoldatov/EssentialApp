@@ -1,6 +1,7 @@
 //
-//  Created by Maxim Soldatov on 12/3/20.
+//  Created by Maksim Soldatov on 12/3/20.
 //
+
 import Foundation
 
 internal final class FeedItemsMapper {
