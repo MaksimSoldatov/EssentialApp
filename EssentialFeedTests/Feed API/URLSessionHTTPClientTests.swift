@@ -194,14 +194,6 @@ class URLSessionHTTPClientTests: XCTestCase {
         override func stopLoading() { }
     }
     
-    private func anyURL() -> URL {
-        return URL(string: "https://any-url.com")!
-    }
-    
-    private func anyNSError() -> NSError {
-        return NSError(domain: "any error", code: 1)
-    }
-    
     private func anyData() -> Data {
         return Data("any data".utf8)
     }
