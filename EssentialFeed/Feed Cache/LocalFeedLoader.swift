@@ -16,6 +16,7 @@ public final class LocalFeedLoader {
         return 7
     }
     
+    
     public init(store: FeedStore, currentDate: @escaping () -> Date) {
         self.store = store
         self.currentDate = currentDate
@@ -44,6 +45,7 @@ public final class LocalFeedLoader {
         store.retrieve { [unowned self] result in
             switch result {
             case let .failure(error):
+                self.store.deleteCachedFeed { _ in }
                 completion(.failure(error))
             case let .found(feed, timestamp) where self.validate(timestamp):
                 completion(.success(feed.toModels()))
