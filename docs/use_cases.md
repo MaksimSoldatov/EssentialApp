@@ -26,7 +26,7 @@
 - URL
 
 #### Primary course (happy path):
-1. Execute "Load Image Data" command with above data.
+1. Execute "Load Image Feed" command with above data.
 2. System downloads data from the URL.
 3. System validates downloaded data.
 4. System delivers image data.
