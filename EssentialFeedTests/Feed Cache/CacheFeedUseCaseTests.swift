@@ -19,13 +19,14 @@ class LocalFeedLoader {
         store.deleteCachedFeed { [weak self] error in
             guard let self = self else { return }
             
-            if error == nil {
+            if let cacheDeletionError = error {
+                completion(cacheDeletionError)
+            } else {
                 self.store.insert(items, timestamp: self.currentDate()) { [weak self] error in
                     guard self != nil else { return }
                     completion(error)
                 }
-            } else {
-                completion(error)
+                
             }
         }
     }
@@ -50,7 +51,7 @@ class CacheFeedUseCaseTests: XCTestCase {
     func test_save_requestsCacheDeletion() {
         let items = [uniqueItem(), uniqueItem()]
         let (sut, store) = makeSUT()
-
+        
         sut.save(items) {_ in }
         
         XCTAssertEqual(store.receivedMessages, [.deleteCachedFeed])
@@ -88,7 +89,7 @@ class CacheFeedUseCaseTests: XCTestCase {
     }
     
     func test_save_failsOnInsertionError() {
- 
+        
         let (sut, store) = makeSUT()
         let insertionError = anyNSError()
         
@@ -210,5 +211,5 @@ class CacheFeedUseCaseTests: XCTestCase {
             insertionCompletions[index](nil)
         }
     }
-
+    
 }
