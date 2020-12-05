@@ -40,10 +40,9 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
     
     func test_load_deliversCachedImagesOnLessThanSevenDaysOldCache() {
         let fixedCurrentDate = Date()
-        let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
         let lessThanSevenDaysOldTimestamp = fixedCurrentDate.adding(days: -7).adding(seconds: 1)
-        
         let feed = uniqueImageFeed()
+        let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
         
         expect(sut, toCompleteWith: .success(feed.models)) {
             store.completeRetrieval(with: feed.local, timestamp: lessThanSevenDaysOldTimestamp)
@@ -52,10 +51,9 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
     
     func test_load_deliversNoImagesOnSevenDaysOldCache() {
         let fixedCurrentDate = Date()
-        let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
         let lessThanSevenDaysOldTimestamp = fixedCurrentDate.adding(days: -7)
-        
         let feed = uniqueImageFeed()
+        let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
         
         expect(sut, toCompleteWith: .success([])) {
             store.completeRetrieval(with: feed.local, timestamp: lessThanSevenDaysOldTimestamp)
@@ -83,7 +81,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         XCTAssertEqual(store.receivedMessages, [.retrieve, .deleteCachedFeed])
     }
     
-    func test_load_notDeletesCacheOnEmptyCache() {
+    func test_load_doesNotDeletesCacheOnEmptyCache() {
         let (sut,store) = makeSUT()
         
         sut.load { _ in }
@@ -91,6 +89,19 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         
         XCTAssertEqual(store.receivedMessages, [.retrieve])
     }
+    
+    func test_load_doesNotDeletesCacheOnLessThanSevenDaysOldCache() {
+        let fixedCurrentDate = Date()
+        let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
+        let lessThanSevenDaysOldTimestamp = fixedCurrentDate.adding(days: -7).adding(seconds: 1)
+        let feed = uniqueImageFeed()
+        
+        sut.load { _ in }
+        store.completeRetrieval(with: feed.local, timestamp: lessThanSevenDaysOldTimestamp)
+        
+        XCTAssertEqual(store.receivedMessages, [.retrieve])
+    }
+    
 
     //MARK: - Helper
     
