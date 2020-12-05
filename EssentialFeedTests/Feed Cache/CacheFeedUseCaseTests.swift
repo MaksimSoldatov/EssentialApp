@@ -180,5 +180,5 @@ class CacheFeedUseCaseTests: XCTestCase {
             insertionCompletions[index](nil)
         }
     }
-    
+
 }
