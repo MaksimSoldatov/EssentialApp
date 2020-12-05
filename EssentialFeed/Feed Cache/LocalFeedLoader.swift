@@ -16,7 +16,6 @@ public final class LocalFeedLoader {
         return 7
     }
     
-    
     public init(store: FeedStore, currentDate: @escaping () -> Date) {
         self.store = store
         self.currentDate = currentDate
