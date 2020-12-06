@@ -13,7 +13,7 @@ public final class LocalFeedLoader {
         self.currentDate = currentDate
     }
 }
-   
+
 extension LocalFeedLoader {
     
     public typealias SaveResult = Error?
@@ -38,7 +38,7 @@ extension LocalFeedLoader {
     }
     
 }
-    
+
 extension LocalFeedLoader: FeedLoader {
     
     public typealias LoadResult = LoadFeedResult
@@ -90,3 +90,4 @@ private extension Array where Element == LocalFeedImage {
         return map { FeedImage(id: $0.id, description: $0.description, location: $0.location, url: $0.url) }
     }
 }
+
