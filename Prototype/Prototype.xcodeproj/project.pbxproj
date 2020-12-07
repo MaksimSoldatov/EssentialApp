@@ -13,6 +13,7 @@
 		73128644257DF7B700FCEE69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73128643257DF7B700FCEE69 /* Assets.xcassets */; };
 		73128647257DF7B700FCEE69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73128645257DF7B700FCEE69 /* LaunchScreen.storyboard */; };
 		73128653257DFF5000FCEE69 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73128652257DFF5000FCEE69 /* FeedViewController.swift */; };
+		73128656257E012300FCEE69 /* FeedImageViewModel+PrototypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73128655257E012300FCEE69 /* FeedImageViewModel+PrototypeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		73128646257DF7B700FCEE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73128648257DF7B700FCEE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73128652257DFF5000FCEE69 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		73128655257E012300FCEE69 /* FeedImageViewModel+PrototypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageViewModel+PrototypeData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				7312863A257DF7B600FCEE69 /* AppDelegate.swift */,
 				7312863C257DF7B600FCEE69 /* SceneDelegate.swift */,
+				73128652257DFF5000FCEE69 /* FeedViewController.swift */,
 				73128640257DF7B600FCEE69 /* Main.storyboard */,
 				73128643257DF7B700FCEE69 /* Assets.xcassets */,
 				73128645257DF7B700FCEE69 /* LaunchScreen.storyboard */,
 				73128648257DF7B700FCEE69 /* Info.plist */,
-				73128652257DFF5000FCEE69 /* FeedViewController.swift */,
+				73128655257E012300FCEE69 /* FeedImageViewModel+PrototypeData.swift */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				7312863B257DF7B600FCEE69 /* AppDelegate.swift in Sources */,
 				73128653257DFF5000FCEE69 /* FeedViewController.swift in Sources */,
+				73128656257E012300FCEE69 /* FeedImageViewModel+PrototypeData.swift in Sources */,
 				7312863D257DF7B600FCEE69 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
