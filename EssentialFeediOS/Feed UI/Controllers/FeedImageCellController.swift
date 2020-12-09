@@ -35,7 +35,7 @@ final class FeedImageCellController {
             cell?.feedImageView.image = image
         }
         
-        viewModel.onImageLoadingStateChange = {[weak cell] isLoading in
+        viewModel.onImageLoadingStateChange = { [weak cell] isLoading in
             cell?.feedImageContainer.isShimmering = isLoading
         }
         
