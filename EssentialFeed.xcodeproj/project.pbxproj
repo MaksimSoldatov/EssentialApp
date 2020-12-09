@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7303CE932580A20900EA7A6E /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7303CE922580A20900EA7A6E /* FeedViewModel.swift */; };
 		7312867E257E084600FCEE69 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73128675257E084600FCEE69 /* EssentialFeediOS.framework */; };
 		731A2DC1257E519900D5D714 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731A2DC0257E519900D5D714 /* FeedViewControllerTests.swift */; };
 		731A2DC9257E550F00D5D714 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73258C7F2578C2310052ACF8 /* EssentialFeed.framework */; platformFilter = ios; };
@@ -122,6 +123,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7303CE922580A20900EA7A6E /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		73128675257E084600FCEE69 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73128678257E084600FCEE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7312867D257E084600FCEE69 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +238,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7303CE912580A1BB00EA7A6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7303CE922580A20900EA7A6E /* FeedViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		73128676257E084600FCEE69 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				7347B3DC257FAE1500E22E64 /* Composers */,
+				7303CE912580A1BB00EA7A6E /* Models */,
 				73FDA21F257F9D79006193AD /* Controllers */,
 				73FDA220257F9DA0006193AD /* Views */,
 			);
@@ -745,6 +756,7 @@
 				731A2DDA257E643600D5D714 /* FeedViewController.swift in Sources */,
 				731A2DE1257E7F8000D5D714 /* FeedImageCell.swift in Sources */,
 				7347B3D6257FAA3E00E22E64 /* FeedImageCellController.swift in Sources */,
+				7303CE932580A20900EA7A6E /* FeedViewModel.swift in Sources */,
 				7347B3DE257FAE3800E22E64 /* FeedUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
