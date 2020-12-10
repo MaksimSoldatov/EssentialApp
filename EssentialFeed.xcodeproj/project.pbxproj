@@ -73,7 +73,6 @@
 		73FDA237257FA02A006193AD /* FeedViewControllerTests+LoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FDA236257FA02A006193AD /* FeedViewControllerTests+LoaderSpy.swift */; };
 		73FDA23E257FA090006193AD /* FeedViewControllerTests+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FDA23D257FA090006193AD /* FeedViewControllerTests+Assertions.swift */; };
 		73FDA245257FA13A006193AD /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FDA244257FA13A006193AD /* FeedImageDataLoader.swift */; };
-		73FDA251257FA47D006193AD /* FeedRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FDA250257FA47D006193AD /* FeedRefreshViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,7 +195,6 @@
 		73FDA236257FA02A006193AD /* FeedViewControllerTests+LoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+LoaderSpy.swift"; sourceTree = "<group>"; };
 		73FDA23D257FA090006193AD /* FeedViewControllerTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Assertions.swift"; sourceTree = "<group>"; };
 		73FDA244257FA13A006193AD /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
-		73FDA250257FA47D006193AD /* FeedRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRefreshViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -495,7 +493,6 @@
 			isa = PBXGroup;
 			children = (
 				731A2DD9257E643600D5D714 /* FeedViewController.swift */,
-				73FDA250257FA47D006193AD /* FeedRefreshViewController.swift */,
 				7347B3D5257FAA3E00E22E64 /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
@@ -773,7 +770,6 @@
 				734734F8258223FB000FA162 /* FeedPresenter.swift in Sources */,
 				73FDA245257FA13A006193AD /* FeedImageDataLoader.swift in Sources */,
 				7347351725823EFA000FA162 /* FeedViewModel.swift in Sources */,
-				73FDA251257FA47D006193AD /* FeedRefreshViewController.swift in Sources */,
 				7347351025823EBC000FA162 /* FeedLoadingViewModel.swift in Sources */,
 				73FDA1F6257F88BE006193AD /* UIView+Shimmering.swift in Sources */,
 				731A2DDA257E643600D5D714 /* FeedViewController.swift in Sources */,
