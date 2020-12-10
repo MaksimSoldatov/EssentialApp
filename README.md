@@ -4,6 +4,8 @@
 
 ## App Architecture
 
+[App Architecture](./pictures/architecture_overview)
+
 
 ## App Requirements
 
