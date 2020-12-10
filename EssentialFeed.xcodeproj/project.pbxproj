@@ -34,8 +34,8 @@
 		7347353A2582459C000FA162 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 734735392582459C000FA162 /* Feed.xcassets */; };
 		734735462582590E000FA162 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734735452582590E000FA162 /* UITableView+Dequeueing.swift */; };
 		7347355225825A0A000FA162 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347355125825A0A000FA162 /* UIImageView+Animations.swift */; };
-		7347355E25826346000FA162 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7347355D25826346000FA162 /* Feed.strings */; };
 		73473565258265B5000FA162 /* FeedUIIntegrationTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73473564258265B5000FA162 /* FeedUIIntegrationTests+Localization.swift */; };
+		7347358925826826000FA162 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7347358B25826826000FA162 /* Feed.strings */; };
 		7347B3D6257FAA3E00E22E64 /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347B3D5257FAA3E00E22E64 /* FeedImageCellController.swift */; };
 		7347B3DE257FAE3800E22E64 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347B3DD257FAE3800E22E64 /* FeedUIComposer.swift */; };
 		735E2D79257BDF93005DD231 /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E2D78257BDF93005DD231 /* ValidateFeedCacheUseCaseTests.swift */; };
@@ -162,8 +162,8 @@
 		734735392582459C000FA162 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		734735452582590E000FA162 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		7347355125825A0A000FA162 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
-		7347355D25826346000FA162 /* Feed.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Feed.strings; sourceTree = "<group>"; };
 		73473564258265B5000FA162 /* FeedUIIntegrationTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedUIIntegrationTests+Localization.swift"; sourceTree = "<group>"; };
+		7347358A25826826000FA162 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		7347B3D5257FAA3E00E22E64 /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 		7347B3DD257FAE3800E22E64 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 		735E2D78257BDF93005DD231 /* ValidateFeedCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedCacheUseCaseTests.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 				7347350F25823EBC000FA162 /* FeedLoadingViewModel.swift */,
 				7347350825823CEA000FA162 /* FeeImagePresenter.swift */,
 				7303CE9E2580B2EA00EA7A6E /* FeedImageViewModel.swift */,
-				7347355D25826346000FA162 /* Feed.strings */,
+				7347358B25826826000FA162 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -726,7 +726,7 @@
 			files = (
 				73473532258244E6000FA162 /* Feed.storyboard in Resources */,
 				7347353A2582459C000FA162 /* Feed.xcassets in Resources */,
-				7347355E25826346000FA162 /* Feed.strings in Resources */,
+				7347358925826826000FA162 /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,6 +901,17 @@
 			targetProxy = 73E67A8F257A7B3600130A20 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7347358B25826826000FA162 /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7347358A25826826000FA162 /* en */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		73128687257E084600FCEE69 /* Debug */ = {
