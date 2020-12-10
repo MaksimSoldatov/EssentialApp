@@ -12,7 +12,7 @@ public final class FeedUIComposer {
         let presentationAdapter = FeedLoaderPresentationAdapter(feedLoader:
                      MainQueueDispatchDecorator(decoratee: feedLoader))
     
-        let feedController = FeedViewController.makeWidth(
+        let feedController = makeFeedViewController(
             delegate: presentationAdapter,
             title:  FeedPresenter.title)
 
@@ -23,10 +23,8 @@ public final class FeedUIComposer {
         
         return feedController
     }
-}
-
-private extension FeedViewController {
-    static func makeWidth(delegate: FeedViewControllerDelegate, title: String) -> FeedViewController {
+    
+    private static func makeFeedViewController(delegate: FeedViewControllerDelegate, title: String) -> FeedViewController {
         
         let bundle = Bundle(for: FeedViewController.self)
         let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
