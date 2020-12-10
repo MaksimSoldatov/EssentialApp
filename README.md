@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/MaksimSoldatov/EssentialApp.svg?branch=main)](https://travis-ci.com/MaksimSoldatov/EssentialApp)
 
 ## App Architecture
-![App Architecture](./pictures/architecture_overview)
+![App Architecture](./pictures/architecture_overview.png)
 
 ## App Requirements
 
