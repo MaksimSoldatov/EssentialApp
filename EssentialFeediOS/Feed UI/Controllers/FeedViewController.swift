@@ -66,6 +66,12 @@ extension FeedViewController: FeedLoadingView {
     }
 }
 
+extension FeedViewController: FeedErrorView {
+    func display(_ viewModel: FeedErrorViewModel) {
+        errorView.message = viewModel.message
+    }
+}
+
 extension FeedViewController: UITableViewDataSourcePrefetching {
     
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
@@ -77,5 +83,5 @@ extension FeedViewController: UITableViewDataSourcePrefetching {
     public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         indexPaths.forEach(cancelCellControllerLoad)
     }
-    
 }
+
