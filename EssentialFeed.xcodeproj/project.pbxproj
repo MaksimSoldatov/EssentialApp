@@ -51,6 +51,7 @@
 		7371E9292583751A000CC0CF /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371E9282583751A000CC0CF /* FeedPresenterTests.swift */; };
 		7371E94025837D96000CC0CF /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371E93F25837D96000CC0CF /* ErrorView.swift */; };
 		7371E94D25838217000CC0CF /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371E94C25838217000CC0CF /* FeedErrorViewModel.swift */; };
+		7371E95425838287000CC0CF /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371E95325838287000CC0CF /* UIRefreshControl+Helpers.swift */; };
 		737D0E95257D20AC00D2E8A5 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737D0E94257D20AC00D2E8A5 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */; };
 		737D0E9A257D212800D2E8A5 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737D0E99257D212800D2E8A5 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */; };
 		737D0E9F257D21AC00D2E8A5 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737D0E9E257D21AC00D2E8A5 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
@@ -190,6 +191,7 @@
 		7371E9282583751A000CC0CF /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
 		7371E93F25837D96000CC0CF /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		7371E94C25838217000CC0CF /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
+		7371E95325838287000CC0CF /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		737D0E94257D20AC00D2E8A5 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableRetrieveFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		737D0E99257D212800D2E8A5 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableInsertFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		737D0E9E257D21AC00D2E8A5 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -279,13 +281,13 @@
 		7303CE912580A1BB00EA7A6E /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7371E94C25838217000CC0CF /* FeedErrorViewModel.swift */,
 				734734F7258223FB000FA162 /* FeedPresenter.swift */,
 				7347351625823EFA000FA162 /* FeedViewModel.swift */,
 				7347350F25823EBC000FA162 /* FeedLoadingViewModel.swift */,
 				7347350825823CEA000FA162 /* FeeImagePresenter.swift */,
 				7303CE9E2580B2EA00EA7A6E /* FeedImageViewModel.swift */,
 				7347358B25826826000FA162 /* Feed.strings */,
-				7371E94C25838217000CC0CF /* FeedErrorViewModel.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -453,6 +455,7 @@
 				7347355125825A0A000FA162 /* UIImageView+Animations.swift */,
 				734735452582590E000FA162 /* UITableView+Dequeueing.swift */,
 				73FDA1F5257F88BE006193AD /* UIView+Shimmering.swift */,
+				7371E95325838287000CC0CF /* UIRefreshControl+Helpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -846,6 +849,7 @@
 				734734F8258223FB000FA162 /* FeedPresenter.swift in Sources */,
 				73FDA245257FA13A006193AD /* FeedImageDataLoader.swift in Sources */,
 				7371E94025837D96000CC0CF /* ErrorView.swift in Sources */,
+				7371E95425838287000CC0CF /* UIRefreshControl+Helpers.swift in Sources */,
 				7347351725823EFA000FA162 /* FeedViewModel.swift in Sources */,
 				734735462582590E000FA162 /* UITableView+Dequeueing.swift in Sources */,
 				7347351025823EBC000FA162 /* FeedLoadingViewModel.swift in Sources */,

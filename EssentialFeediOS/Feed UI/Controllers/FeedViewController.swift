@@ -54,11 +54,7 @@ public final class FeedViewController: UITableViewController {
 extension FeedViewController: FeedLoadingView {
     
     func display(_ viewModel: FeedLoadingViewModel) {
-        if viewModel.isLoading {
-            refreshControl?.beginRefreshing()
-        } else {
-            refreshControl?.endRefreshing()
-        }
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
 }
 
