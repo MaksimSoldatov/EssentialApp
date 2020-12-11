@@ -71,6 +71,7 @@
 		738E61C8257967FE004C2A00 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738E61C7257967FE004C2A00 /* URLSessionHTTPClientTests.swift */; };
 		739BD5E6257BBCEB000FCF7C /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739BD5E5257BBCEB000FCF7C /* LoadFeedFromCacheUseCaseTests.swift */; };
 		739BD5EC257BBF5A000FCF7C /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739BD5EB257BBF5A000FCF7C /* FeedStoreSpy.swift */; };
+		73A0774F2583918000C44865 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73A077512583918000C44865 /* Feed.strings */; };
 		73E67A7C257A463B00130A20 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E67A7B257A463B00130A20 /* XCTestCase+MemoryLeakTracking.swift */; };
 		73E67A82257A68AA00130A20 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E67A81257A68AA00130A20 /* URLSessionHTTPClient.swift */; };
 		73E67A8C257A7B3600130A20 /* EssentialFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E67A8B257A7B3600130A20 /* EssentialFeedAPIEndToEndTests.swift */; };
@@ -209,6 +210,9 @@
 		738E61C7257967FE004C2A00 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		739BD5E5257BBCEB000FCF7C /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		739BD5EB257BBF5A000FCF7C /* FeedStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpy.swift; sourceTree = "<group>"; };
+		73A077502583918000C44865 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
+		73A077572583918300C44865 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Feed.strings; sourceTree = "<group>"; };
+		73A077582583918400C44865 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Feed.strings; sourceTree = "<group>"; };
 		73E67A7B257A463B00130A20 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		73E67A81257A68AA00130A20 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		73E67A89257A7B3600130A20 /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,16 +441,9 @@
 			isa = PBXGroup;
 			children = (
 				7371E9282583751A000CC0CF /* FeedPresenterTests.swift */,
-				7371E93425837680000CC0CF /* New Group */,
+				73A077512583918000C44865 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
-			sourceTree = "<group>";
-		};
-		7371E93425837680000CC0CF /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		7371E94B258381CC000CC0CF /* Helpers */ = {
@@ -822,6 +819,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A0774F2583918000C44865 /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,6 +991,16 @@
 				7347358A25826826000FA162 /* en */,
 				734735912582688B000FA162 /* ru */,
 				734735972582689D000FA162 /* sv */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
+		73A077512583918000C44865 /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73A077502583918000C44865 /* en */,
+				73A077572583918300C44865 /* ru */,
+				73A077582583918400C44865 /* sv */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
