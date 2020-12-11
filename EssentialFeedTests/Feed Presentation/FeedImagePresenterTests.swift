@@ -23,16 +23,18 @@ protocol FeedImageView {
 public final class FeedImagePresenter {
     
     private let view: FeedImageView
+    private let imageTransformer: (Data) -> Any?
     
-    init(view: FeedImageView) {
+    init(view: FeedImageView, imageTransformer: @escaping (Data) -> Any?) {
         self.view = view
+        self.imageTransformer = imageTransformer
     }
     
-    func didStartLoadingImageData(for model: FeedImage) {
+    func didStartLoadingImageData(with data: Data, for model: FeedImage) {
         view.display(FeedImageViewModel(
                         description: model.description,
                         location: model.location,
-                        image: nil,
+                        image: imageTransformer(data),
                         isLoading: true,
                         shouldRetry: false))
     }
@@ -49,8 +51,9 @@ class FeedImagePresenterTests: XCTestCase {
     func test_didStartLoadingImageData_displaysLoadingImage() {
         let (sut, view) = makeSUT()
         let image = uniqueImage()
+        let data = Data()
         
-        sut.didStartLoadingImageData(for: image)
+        sut.didStartLoadingImageData(with: data, for: image)
         
         let message = view.messages.first
         XCTAssertEqual(view.messages.count, 1)
@@ -63,9 +66,13 @@ class FeedImagePresenterTests: XCTestCase {
     
     //MARK: - Helpers
     
-    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: FeedImagePresenter, view: ViewSpy) {
+    private func makeSUT(
+        imageTransformer: @escaping (Data) -> Any? = { _ in nil},
+        file: StaticString = #filePath,
+        line: UInt = #line
+    ) -> (sut: FeedImagePresenter, view: ViewSpy) {
         let view = ViewSpy()
-        let sut = FeedImagePresenter(view: view)
+        let sut = FeedImagePresenter(view: view, imageTransformer: imageTransformer)
         trackForMemoryLeaks(view, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, view)
