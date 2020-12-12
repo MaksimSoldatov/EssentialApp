@@ -2,6 +2,7 @@
 //  Created by Maksim Soldatov on 8.12.20.
 //
 import UIKit
+import EssentialFeed
 
 protocol FeedImageCellControllerDelegate {
     func didRequestImage()

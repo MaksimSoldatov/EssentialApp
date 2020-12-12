@@ -20,12 +20,11 @@ public final class FeedImagePresenter<View: FeedImageView, Image> where View.Ima
         self.imageTransformer = imageTransformer
     }
     
-    public func didStartLoadingImageData(with data: Data, for model: FeedImage) {
-        let image = imageTransformer(data)
+    public func didStartLoadingImageData(for model: FeedImage) {
         view.display(FeedImageViewModel(
                         description: model.description,
                         location: model.location,
-                        image: image,
+                        image: nil,
                         isLoading: true,
                         shouldRetry: false))
     }
