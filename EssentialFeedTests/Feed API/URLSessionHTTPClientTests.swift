@@ -1,7 +1,6 @@
 //
 //  Created by Maksim Soldatov on 12/3/20.
 //
-
 import XCTest
 import EssentialFeed
 
