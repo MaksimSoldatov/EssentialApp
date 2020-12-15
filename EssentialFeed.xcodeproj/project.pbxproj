@@ -21,6 +21,8 @@
 		73258CA32578C3780052ACF8 /* FeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73258CA22578C3780052ACF8 /* FeedImage.swift */; };
 		73258CAB2578C47D0052ACF8 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73258CAA2578C47D0052ACF8 /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		73258CB02578D4360052ACF8 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73258CAF2578D4360052ACF8 /* RemoteFeedLoader.swift */; };
+		733BCBAB2589103800114C88 /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733BCBAA2589103800114C88 /* FeedImageDataStore.swift */; };
+		733BCBB22589108800114C88 /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733BCBB12589108800114C88 /* LocalFeedImageDataLoader.swift */; };
 		734066B8257BAD4700D12013 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734066B7257BAD4700D12013 /* LocalFeedLoader.swift */; };
 		734066BD257BADF400D12013 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734066BC257BADF400D12013 /* FeedStore.swift */; };
 		734066C2257BB6F700D12013 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734066C1257BB6F700D12013 /* RemoteFeedItem.swift */; };
@@ -166,6 +168,8 @@
 		73258CA22578C3780052ACF8 /* FeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImage.swift; sourceTree = "<group>"; };
 		73258CAA2578C47D0052ACF8 /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		73258CAF2578D4360052ACF8 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
+		733BCBAA2589103800114C88 /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
+		733BCBB12589108800114C88 /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		734066B7257BAD4700D12013 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		734066BC257BADF400D12013 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		734066C1257BB6F700D12013 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
@@ -400,6 +404,8 @@
 				734066BC257BADF400D12013 /* FeedStore.swift */,
 				734066C6257BB75900D12013 /* LocalFeedImage.swift */,
 				735E2D87257BEF78005DD231 /* FeedCachePolicy.swift */,
+				733BCBAA2589103800114C88 /* FeedImageDataStore.swift */,
+				733BCBB12589108800114C88 /* LocalFeedImageDataLoader.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -921,6 +927,7 @@
 				734066B8257BAD4700D12013 /* LocalFeedLoader.swift in Sources */,
 				738E61BB25795538004C2A00 /* HTTPClient.swift in Sources */,
 				73258C9F2578C2F00052ACF8 /* FeedLoader.swift in Sources */,
+				733BCBAB2589103800114C88 /* FeedImageDataStore.swift in Sources */,
 				73A077662583934D00C44865 /* FeedPresenter.swift in Sources */,
 				73E67A82257A68AA00130A20 /* URLSessionHTTPClient.swift in Sources */,
 				73B8454A258761F5003D130B /* HTTPURLResponse+StatusCode.swift in Sources */,
@@ -929,6 +936,7 @@
 				73A077A6258398FC00C44865 /* FeedErrorViewModel.swift in Sources */,
 				73B8451825862F38003D130B /* FeedImageDataLoader.swift in Sources */,
 				73A0779E258398BC00C44865 /* FeedLoadingViewModel.swift in Sources */,
+				733BCBB22589108800114C88 /* LocalFeedImageDataLoader.swift in Sources */,
 				737F076E2584D45A007A6A2E /* FeedImagePresenter.swift in Sources */,
 				737D0EDF257D3E5A00D2E8A5 /* ManagedFeedImage.swift in Sources */,
 			);
