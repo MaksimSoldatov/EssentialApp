@@ -7,4 +7,4 @@
 
 ## App Requirements
 
-[Feed Image Use Cases](./docs/feed_image_use_cases.md)
+[Feed Image Use Cases](./docs/use_cases.md)
