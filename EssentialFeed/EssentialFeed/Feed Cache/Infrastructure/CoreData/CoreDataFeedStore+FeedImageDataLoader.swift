@@ -10,7 +10,7 @@ extension CoreDataFeedStore: FeedImageDataStore {
             completion(Result {
                 try ManagedFeedImage.first(with: url, in: context)
                     .map { $0.data = data }
-                try context.save()
+                    .map { try context.save()}
             })
         }
     }
