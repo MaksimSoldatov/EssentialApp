@@ -2,6 +2,7 @@
 //  Created by Maksim Soldatov on 15.12.20.
 //
 import Foundation
+import EssentialFeed
 
 public final class LocalFeedImageDataLoader {
     private let store: FeedImageDataStore

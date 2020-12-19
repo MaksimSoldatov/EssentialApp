@@ -2,6 +2,7 @@
 //  Created by Maksim Soldatov on 12/5/20.
 //
 import Foundation
+import EssentialFeed
 
 public final class LocalFeedLoader {
     

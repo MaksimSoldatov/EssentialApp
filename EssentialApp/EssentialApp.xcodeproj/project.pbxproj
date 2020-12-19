@@ -48,6 +48,8 @@
 		73CB81E1258E492500E9FF4A /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB81E0258E492500E9FF4A /* UIView+TestHelpers.swift */; };
 		73CB8291258E516A00E9FF4A /* EssentialFeedAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CB8290258E516A00E9FF4A /* EssentialFeedAPI.framework */; };
 		73CB8292258E516A00E9FF4A /* EssentialFeedAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73CB8290258E516A00E9FF4A /* EssentialFeedAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73CB84AE258E5D7100E9FF4A /* EssentialFeedCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CB84AD258E5D7100E9FF4A /* EssentialFeedCache.framework */; };
+		73CB84AF258E5D7100E9FF4A /* EssentialFeedCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73CB84AD258E5D7100E9FF4A /* EssentialFeedCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73EB33A4258C922D001B46A2 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB33A3258C922D001B46A2 /* FeedLoaderCacheDecorator.swift */; };
 		73EB33AA258C92F0001B46A2 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB33A8258C92F0001B46A2 /* FeedImageDataLoaderCacheDecoratorTests.swift */; };
 		73EB33AE258C938C001B46A2 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB33AD258C938C001B46A2 /* FeedImageDataLoaderSpy.swift */; };
@@ -72,6 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				73CB84AF258E5D7100E9FF4A /* EssentialFeedCache.framework in Embed Frameworks */,
 				73CB8292258E516A00E9FF4A /* EssentialFeedAPI.framework in Embed Frameworks */,
 				733BCC912589DCA200114C88 /* EssentialFeed.framework in Embed Frameworks */,
 				733BCC932589DCA200114C88 /* EssentialFeediOS.framework in Embed Frameworks */,
@@ -124,6 +127,7 @@
 		73CB81AB258E3AD100E9FF4A /* InMemoryFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFeedStore.swift; sourceTree = "<group>"; };
 		73CB81E0258E492500E9FF4A /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
 		73CB8290258E516A00E9FF4A /* EssentialFeedAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeedAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73CB84AD258E5D7100E9FF4A /* EssentialFeedCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeedCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EB33A3258C922D001B46A2 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 		73EB33A8258C92F0001B46A2 /* FeedImageDataLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 		73EB33AD258C938C001B46A2 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CB84AE258E5D7100E9FF4A /* EssentialFeedCache.framework in Frameworks */,
 				73CB8291258E516A00E9FF4A /* EssentialFeedAPI.framework in Frameworks */,
 				733BCC902589DCA200114C88 /* EssentialFeed.framework in Frameworks */,
 				733BCC922589DCA200114C88 /* EssentialFeediOS.framework in Frameworks */,
@@ -213,6 +218,7 @@
 		733BCC8D2589DCA200114C88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73CB84AD258E5D7100E9FF4A /* EssentialFeedCache.framework */,
 				73CB8290258E516A00E9FF4A /* EssentialFeedAPI.framework */,
 				733BCC8E2589DCA200114C88 /* EssentialFeed.framework */,
 				733BCC8F2589DCA200114C88 /* EssentialFeediOS.framework */,

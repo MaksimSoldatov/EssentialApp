@@ -3,6 +3,7 @@
 //
 import Foundation
 import EssentialFeed
+import EssentialFeedCache
 
 func uniqueImage() -> FeedImage {
     FeedImage(id: UUID(), description: "some description", location: "some location", url: anyURL())

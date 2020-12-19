@@ -1,9 +1,9 @@
 //
 //  Created by Maksim Soldatov on 12/5/20.
 //
-
 import XCTest
 import EssentialFeed
+import EssentialFeedCache
 
 class ValidateFeedCacheUseCaseTests: XCTestCase {
     

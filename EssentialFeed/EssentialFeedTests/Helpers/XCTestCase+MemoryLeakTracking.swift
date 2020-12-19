@@ -1,7 +1,6 @@
 //
 //  Created by Maksim Soldatov on 12/4/20.
 //
-
 import XCTest
 
 extension XCTestCase {

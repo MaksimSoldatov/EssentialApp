@@ -3,6 +3,7 @@
 //
 import Foundation
 import EssentialFeed
+import EssentialFeedCache
 
 class FeedImageDataStoreSpy: FeedImageDataStore {
     
