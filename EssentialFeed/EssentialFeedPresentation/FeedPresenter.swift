@@ -2,6 +2,7 @@
 //  Created by Maksim Soldatov on 11.12.20.
 //
 import Foundation
+import EssentialFeed
 
 public protocol FeedView {
     func display(_ viewModel: FeedViewModel)

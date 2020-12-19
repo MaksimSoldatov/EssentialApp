@@ -1,13 +1,13 @@
 //
 //  Created by Maksim Soldatov on 12/4/20.
 //
-
 import XCTest
 import EssentialFeed
+import EssentialFeedAPI
 
 class EssentialFeedAPIEndToEndTests: XCTestCase {
     
-    func test_endToEndTestServerGETFeddResult_matchesFixedTestAccountData() {
+    func test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData() {
       
         switch getFeedResult() {
         case let .success(imageFeed):

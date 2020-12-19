@@ -1,8 +1,8 @@
 //
 //  Created by Maksim Soldatov on 12.12.20.
 //
-
 import Foundation
+import EssentialFeed
 
 public protocol FeedImageView {
     associatedtype Image

@@ -3,7 +3,7 @@
 //
 import XCTest
 import EssentialFeed
-
+import EssentialFeedPresentation
 
 class FeedImagePresenterTests: XCTestCase {
     

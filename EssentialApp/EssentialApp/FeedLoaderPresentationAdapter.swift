@@ -3,6 +3,7 @@
 //
 import EssentialFeed
 import EssentialFeediOS
+import EssentialFeedPresentation
 
 final class FeedLoaderPresentationAdapter {
     private let feedLoader: FeedLoader

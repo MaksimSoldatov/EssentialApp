@@ -2,8 +2,7 @@
 //  Created by Maksim Soldatov on 10.12.20.
 //
 import UIKit
-import EssentialFeed
-import EssentialFeediOS
+import EssentialFeedPresentation
 
 final class WeakRefVirtualProxy<T: AnyObject> {
     
