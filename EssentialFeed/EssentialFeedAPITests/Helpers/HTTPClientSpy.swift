@@ -2,7 +2,7 @@
 //  Created by Maksim Soldatov on 14.12.20.
 //
 import XCTest
-import EssentialFeed
+import EssentialFeedAPI
 
 class HTTPClientSpy: HTTPClient {
     

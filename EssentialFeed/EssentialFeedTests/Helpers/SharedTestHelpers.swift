@@ -1,7 +1,6 @@
 //
 //  Created by Maksim Soldatov on 12/5/20.
 //
-
 import Foundation
 
 func anyURL() -> URL {

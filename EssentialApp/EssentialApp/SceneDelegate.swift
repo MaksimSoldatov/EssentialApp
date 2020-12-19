@@ -2,9 +2,9 @@
 //  Created by Maksim Soldatov on 16.12.20.
 //
 import UIKit
-import EssentialFeed
 import CoreData
-import EssentialFeediOS
+import EssentialFeed
+import EssentialFeedAPI 
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     

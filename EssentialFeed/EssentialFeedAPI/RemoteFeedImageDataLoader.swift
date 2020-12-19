@@ -2,6 +2,7 @@
 //  Created by Maksim Soldatov on 14.12.20.
 //
 import Foundation
+import EssentialFeed
 
 public final class RemoteFeedImageDataLoader: FeedImageDataLoader {
     

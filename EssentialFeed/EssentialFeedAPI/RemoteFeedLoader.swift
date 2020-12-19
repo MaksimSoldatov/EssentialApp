@@ -1,8 +1,8 @@
 //
 //  Created by Maksim Soldatov on 12/3/20.
 //
-
 import Foundation
+import EssentialFeed
 
 public final class RemoteFeedLoader: FeedLoader {
     
