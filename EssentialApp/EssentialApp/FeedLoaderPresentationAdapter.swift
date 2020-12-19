@@ -2,6 +2,7 @@
 //  Created by Maksim Soldatov on 10.12.20.
 //
 import EssentialFeed
+import EssentialFeediOS
 
 final class FeedLoaderPresentationAdapter {
     private let feedLoader: FeedLoader
