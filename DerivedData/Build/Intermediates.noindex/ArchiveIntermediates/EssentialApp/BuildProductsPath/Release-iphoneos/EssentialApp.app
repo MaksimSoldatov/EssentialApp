@@ -1,1 +1,0 @@
-/Users/soldatov/Desktop/EssentialApp/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/EssentialApp/InstallationBuildProductsLocation/Applications/EssentialApp.app

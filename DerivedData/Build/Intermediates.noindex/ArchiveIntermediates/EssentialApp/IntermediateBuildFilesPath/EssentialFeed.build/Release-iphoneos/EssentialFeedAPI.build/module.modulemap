@@ -1,4 +1,0 @@
-framework module EssentialFeedAPI {
-  header "EssentialFeedAPI-Swift.h"
-  requires objc
-}

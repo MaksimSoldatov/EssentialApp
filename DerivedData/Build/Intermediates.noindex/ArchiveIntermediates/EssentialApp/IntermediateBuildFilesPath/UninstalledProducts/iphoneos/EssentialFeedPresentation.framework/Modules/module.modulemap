@@ -1,4 +1,0 @@
-framework module EssentialFeedPresentation {
-  header "EssentialFeedPresentation-Swift.h"
-  requires objc
-}

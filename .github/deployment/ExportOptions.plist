@@ -18,9 +18,9 @@
 	<key>stripSwiftSymbols</key>
 	<true/>
 	<key>teamID</key>
-	<string>CF3B3QT65H</string>
+	<string>AEZ84QR4S6</string>
 	<key>uploadBitcode</key>
-	<true/>
+	<false/>
 	<key>uploadSymbols</key>
 	<true/>
 </dict>

@@ -1,4 +1,0 @@
-framework module EssentialFeedCache {
-  header "EssentialFeedCache-Swift.h"
-  requires objc
-}

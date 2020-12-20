@@ -1,2 +1,0 @@
-dependencies: \
-  /Users/soldatov/Desktop/EssentialApp/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/EssentialApp/IntermediateBuildFilesPath/EssentialFeed.build/Release-iphoneos/EssentialFeedPresentation.build/DerivedSources/EssentialFeedPresentation_vers.c
