@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "74531d9f0844d300a95080fcb00b3bf0"
+build_time: [1608476350, 420844000]
+inputs:
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeediOS/Feed UI/Views/UITableView+HeaderSizing.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeediOS/Feed UI/Views/ErrorView.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeediOS/Feed UI/Views/Helpers/UIRefreshControl+Helpers.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeediOS/Feed UI/Views/Helpers/UITableView+Dequeueing.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeediOS/Feed UI/Views/Helpers/UIView+Shimmering.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeediOS/Feed UI/Controllers/FeedViewController.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeediOS/Feed UI/Views/Helpers/UIImageView+Animations.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeediOS/Feed UI/Views/FeedImageCell.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeediOS/Feed UI/Controllers/FeedImageCellController.swift": [9223372036, 854775807]

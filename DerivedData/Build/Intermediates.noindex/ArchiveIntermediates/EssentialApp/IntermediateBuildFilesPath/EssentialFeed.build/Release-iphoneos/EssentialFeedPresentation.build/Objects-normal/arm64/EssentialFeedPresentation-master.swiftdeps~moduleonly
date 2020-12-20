@@ -1,0 +1,10 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "b895ae46585abb8b36af0e7e63b3f94b"
+build_time: [1608476348, 972467000]
+inputs:
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeedPresentation/FeedImagePresenter.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeedPresentation/Models/FeedErrorViewModel.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeedPresentation/Models/FeedImageViewModel.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeedPresentation/Models/FeedLoadingViewModel.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeedPresentation/FeedPresenter.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialFeed/EssentialFeedPresentation/Models/FeedViewModel.swift": [9223372036, 854775807]

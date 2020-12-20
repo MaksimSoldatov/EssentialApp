@@ -1,0 +1,16 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "81d2a62aca98489b1b7d8acd7b3e9409"
+build_time: [1608476355, 474460000]
+inputs:
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/FeedLoaderPresentationAdapter.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/FeedImageDataLoaderWithFallbackComposite.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/MainQueueDispatchDecorator.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/FeedImageDataLoaderPresentationAdapter.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/FeedViewAdapter.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/WeakRefVirtualProxy.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/FeedUIComposer.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/FeedLoaderWithFallbackComposite.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/FeedImageDataLoaderCacheDecorator.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/FeedLoaderCacheDecorator.swift": [9223372036, 854775807]
+  "/Users/soldatov/Desktop/EssentialApp/EssentialApp/EssentialApp/SceneDelegate.swift": [9223372036, 854775807]
