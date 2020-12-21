@@ -9,7 +9,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.maxim.soldatov.EssentialApp</key>
-		<string>iOS Distribution</string>
+		<string>new_profile</string>
 	</dict>
 	<key>signingCertificate</key>
 	<string>Apple Distribution</string>
@@ -18,7 +18,7 @@
 	<key>stripSwiftSymbols</key>
 	<true/>
 	<key>teamID</key>
-	<string>AEZ84QR4S6</string>
+	<string>CF3B3QT65H</string>
 	<key>uploadBitcode</key>
 	<false/>
 	<key>uploadSymbols</key>
