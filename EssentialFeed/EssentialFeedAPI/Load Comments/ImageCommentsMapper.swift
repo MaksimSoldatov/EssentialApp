@@ -4,7 +4,7 @@
 import Foundation
 import EssentialFeed
 
-internal final class ImageCommentsMapper {
+public final class ImageCommentsMapper {
     
     private struct Root: Decodable {
         private let items: [Item]
