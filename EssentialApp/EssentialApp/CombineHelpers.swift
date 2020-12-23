@@ -5,6 +5,7 @@ import Combine
 import Foundation
 import EssentialFeed
 import EssentialFeedAPI
+import EssentialFeedCache
 
 public extension HTTPClient {
     typealias Publisher = AnyPublisher<(Data, HTTPURLResponse), Error>
@@ -53,7 +54,7 @@ private extension FeedImageDataCache {
     }
 }
 
-public extension FeedLoader {
+public extension LocalFeedLoader {
     typealias Publisher = AnyPublisher<[FeedImage], Error>
     
     func loadPublisher() -> Publisher {
