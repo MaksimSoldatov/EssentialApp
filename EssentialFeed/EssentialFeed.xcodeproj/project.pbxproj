@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7304388D2598BFEB00CE9AAE /* SharedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7304388B2598BFEB00CE9AAE /* SharedLocalizationTests.swift */; };
 		7312867E257E084600FCEE69 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73128675257E084600FCEE69 /* EssentialFeediOS.framework */; };
 		731A2DD3257E55DF00D5D714 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E67A7B257A463B00130A20 /* XCTestCase+MemoryLeakTracking.swift */; };
 		731A2DDA257E643600D5D714 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731A2DD9257E643600D5D714 /* FeedViewController.swift */; };
@@ -23,6 +24,7 @@
 		735EF1B1259228CC000C15E8 /* ImageCommentsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735EF1B0259228CC000C15E8 /* ImageCommentsMapper.swift */; };
 		735F39E72598AE5300DA392F /* LoadResourcePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F39E52598AE5300DA392F /* LoadResourcePresenterTests.swift */; };
 		735F3A1A2598AF4000DA392F /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F3A192598AF4000DA392F /* LoadResourcePresenter.swift */; };
+		735F3A352598BBD900DA392F /* Shared.strings in Resources */ = {isa = PBXBuildFile; fileRef = 735F3A372598BBD900DA392F /* Shared.strings */; };
 		7371E94025837D96000CC0CF /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371E93F25837D96000CC0CF /* ErrorView.swift */; };
 		7371E95425838287000CC0CF /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371E95325838287000CC0CF /* UIRefreshControl+Helpers.swift */; };
 		737D0EEA257D405600D2E8A5 /* EssentialFeedCacheIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737D0EE9257D405600D2E8A5 /* EssentialFeedCacheIntegrationTests.swift */; };
@@ -196,6 +198,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7304388B2598BFEB00CE9AAE /* SharedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTests.swift; sourceTree = "<group>"; };
 		73128675257E084600FCEE69 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73128678257E084600FCEE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7312867D257E084600FCEE69 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +239,9 @@
 		735EF1B0259228CC000C15E8 /* ImageCommentsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsMapper.swift; sourceTree = "<group>"; };
 		735F39E52598AE5300DA392F /* LoadResourcePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenterTests.swift; sourceTree = "<group>"; };
 		735F3A192598AF4000DA392F /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
+		735F3A362598BBD900DA392F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Shared.strings; sourceTree = "<group>"; };
+		735F3A442598BBDE00DA392F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Shared.strings; sourceTree = "<group>"; };
+		735F3A452598BBDE00DA392F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Shared.strings; sourceTree = "<group>"; };
 		7371E9282583751A000CC0CF /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
 		7371E93F25837D96000CC0CF /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		7371E95325838287000CC0CF /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
@@ -544,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				735F39E52598AE5300DA392F /* LoadResourcePresenterTests.swift */,
+				7304388B2598BFEB00CE9AAE /* SharedLocalizationTests.swift */,
 			);
 			path = "Shared Presentation";
 			sourceTree = "<group>";
@@ -552,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				735F3A192598AF4000DA392F /* LoadResourcePresenter.swift */,
+				735F3A372598BBD900DA392F /* Shared.strings */,
 			);
 			path = "Shared Presentation";
 			sourceTree = "<group>";
@@ -1193,6 +1201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CB8307258E549A00E9FF4A /* Feed.strings in Resources */,
+				735F3A352598BBD900DA392F /* Shared.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1338,6 +1347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				735F39E72598AE5300DA392F /* LoadResourcePresenterTests.swift in Sources */,
+				7304388D2598BFEB00CE9AAE /* SharedLocalizationTests.swift in Sources */,
 				73CB846A258E5B7600E9FF4A /* FeedImageDataStoreSpy.swift in Sources */,
 				73CB834A258E55B700E9FF4A /* FeedPresenterTests.swift in Sources */,
 				73CB8368258E56B700E9FF4A /* XCTestCase+MemoryLeakTracking.swift in Sources */,
@@ -1465,6 +1475,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		735F3A372598BBD900DA392F /* Shared.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				735F3A362598BBD900DA392F /* en */,
+				735F3A442598BBDE00DA392F /* ru */,
+				735F3A452598BBDE00DA392F /* sv */,
+			);
+			name = Shared.strings;
+			sourceTree = "<group>";
+		};
 		73A077842583976E00C44865 /* Feed.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
