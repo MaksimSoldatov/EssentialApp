@@ -10,13 +10,6 @@ public final class LoadResourcePresenter {
     private let loadingView: FeedLoadingView
     private let errorView: FeedErrorView
     
-    public static var title: String {
-        return NSLocalizedString("feed_view_title",
-                                 tableName: "Feed",
-                                 bundle: Bundle(for: FeedPresenter.self),
-                                 comment: "Title for the feed view")
-    }
-    
     private var feedLoadError: String {
         return NSLocalizedString("feed_view_connection_error",
                                  tableName: "Feed",
