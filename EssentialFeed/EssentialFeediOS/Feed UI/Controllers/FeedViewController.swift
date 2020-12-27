@@ -68,9 +68,9 @@ public final class FeedViewController: UITableViewController {
 }
 
 
-extension FeedViewController: FeedLoadingView {
+extension FeedViewController: ResourceLoadingView {
     
-    public func display(_ viewModel: FeedLoadingViewModel) {
+    public func display(_ viewModel: ResourceLoadingViewModel) {
         refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
 }
