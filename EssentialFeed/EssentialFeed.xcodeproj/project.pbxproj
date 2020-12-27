@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7304388D2598BFEB00CE9AAE /* SharedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7304388B2598BFEB00CE9AAE /* SharedLocalizationTests.swift */; };
+		730438A82598C5EE00CE9AAE /* SharedLoacalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730438A72598C5EE00CE9AAE /* SharedLoacalizationTestHelpers.swift */; };
 		7312867E257E084600FCEE69 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73128675257E084600FCEE69 /* EssentialFeediOS.framework */; };
 		731A2DD3257E55DF00D5D714 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E67A7B257A463B00130A20 /* XCTestCase+MemoryLeakTracking.swift */; };
 		731A2DDA257E643600D5D714 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731A2DD9257E643600D5D714 /* FeedViewController.swift */; };
@@ -199,6 +200,7 @@
 
 /* Begin PBXFileReference section */
 		7304388B2598BFEB00CE9AAE /* SharedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTests.swift; sourceTree = "<group>"; };
+		730438A72598C5EE00CE9AAE /* SharedLoacalizationTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLoacalizationTestHelpers.swift; sourceTree = "<group>"; };
 		73128675257E084600FCEE69 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73128678257E084600FCEE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7312867D257E084600FCEE69 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,6 +409,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		730438A62598C5C700CE9AAE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				730438A72598C5EE00CE9AAE /* SharedLoacalizationTestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		73128676257E084600FCEE69 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,6 +765,7 @@
 			isa = PBXGroup;
 			children = (
 				73CB82B4258E539100E9FF4A /* Info.plist */,
+				730438A62598C5C700CE9AAE /* Helpers */,
 				735F39E22598AE1700DA392F /* Shared Presentation */,
 				734735A925826A10000FA162 /* FeedLocalizationTests.swift */,
 				7371E9282583751A000CC0CF /* FeedPresenterTests.swift */,
@@ -1352,6 +1363,7 @@
 				73CB834A258E55B700E9FF4A /* FeedPresenterTests.swift in Sources */,
 				73CB8368258E56B700E9FF4A /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				73CB8370258E56BF00E9FF4A /* SharedTestHelpers.swift in Sources */,
+				730438A82598C5EE00CE9AAE /* SharedLoacalizationTestHelpers.swift in Sources */,
 				73CB831D258E54CE00E9FF4A /* FeedImagePresenterTests.swift in Sources */,
 				73CB8469258E5B7600E9FF4A /* FeedStoreSpy.swift in Sources */,
 				73CB8378258E576400E9FF4A /* FeedCacheTestHelpers.swift in Sources */,
