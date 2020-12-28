@@ -2,11 +2,11 @@
 //  Created by Maksim Soldatov on 10.12.20.
 //
 import Combine
-import EssentialFeed
 import EssentialFeediOS
 import EssentialFeedPresentation
 
 final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
+    
     private let loader: () -> AnyPublisher<Resource, Error>
     private var cancellable: Cancellable?
     var presenter: LoadResourcePresenter<Resource, View>?
@@ -45,5 +45,6 @@ extension LoadResourcePresentationAdapter: FeedImageCellControllerDelegate {
     
     func didCancelImageRequest() {
         cancellable?.cancel()
+        cancellable = nil
     }
 }

@@ -10,13 +10,13 @@ public protocol FeedImageCellControllerDelegate {
     func didCancelImageRequest()
 }
 
-public final class FeedImageCellController: FeedImageView {
+public final class FeedImageCellController {
     
-    private let viewModel: FeedImageViewModel<UIImage>
+    private let viewModel: FeedImageViewModel
     private let delegate: FeedImageCellControllerDelegate
     private var cell: FeedImageCell?
     
-    public init(viewModel: FeedImageViewModel<UIImage>,delegate: FeedImageCellControllerDelegate) {
+    public init(viewModel: FeedImageViewModel, delegate: FeedImageCellControllerDelegate) {
         self.delegate = delegate
         self.viewModel = viewModel
     }
@@ -39,8 +39,6 @@ public final class FeedImageCellController: FeedImageView {
         releaseCellForReuse()
         delegate.didCancelImageRequest()
     }
-    
-    public func display(_ viewModel: FeedImageViewModel<UIImage>) {}
     
     private func releaseCellForReuse() {
         cell = nil
