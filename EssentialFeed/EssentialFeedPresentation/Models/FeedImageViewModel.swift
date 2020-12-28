@@ -3,13 +3,6 @@
 //
 
 public struct FeedImageViewModel<Image> {
-    public init(description: String?, location: String?, image: Image?, isLoading: Bool, shouldRetry: Bool) {
-        self.description = description
-        self.location = location
-        self.image = image
-        self.isLoading = isLoading
-        self.shouldRetry = shouldRetry
-    }
     
     public let description: String?
     public let location: String?
