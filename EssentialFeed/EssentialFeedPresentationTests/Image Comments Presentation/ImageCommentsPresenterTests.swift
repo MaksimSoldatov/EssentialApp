@@ -2,6 +2,7 @@
 //  Created by Maksim Soldatov on 28.12.20.
 //
 import XCTest
+import EssentialFeed
 import EssentialFeedPresentation
 
 final class ImageCommentsPresenterTests: XCTestCase {
@@ -11,11 +12,25 @@ final class ImageCommentsPresenterTests: XCTestCase {
     }
     
     func test_map_createViewModel() {
-        let feed = uniqueImageFeed().models
+        let now = Date()
+        let comments = [
+            ImageComment(id: UUID(),
+                         message: "a message",
+                         createdAt: now.adding(minutes: -5),
+                         username: "a username"),
+            ImageComment(id: UUID(),
+                         message: "another message",
+                         createdAt: now.adding(days: -1),
+                         username: "another username")
+        ]
         
-        let viewModel = FeedPresenter.map(feed)
+        let viewModel = ImageCommentsPresenter.map(comments)
         
-        XCTAssertEqual(viewModel.feed, feed)
+        XCTAssertEqual(viewModel.comments, [
+            ImageCommentViewModel(message: "a message", date: "5 minutes ago", username: "a username"),
+            ImageCommentViewModel(message: "another message", date: "1 day ago", username: "another username" )
+        
+        ])
     }
     
     //MARK: - Helpers
