@@ -11,7 +11,7 @@ extension ListViewController {
     }
     
     var errorMessage: String? {
-        return errorView?.message
+        return errorView.message
     }
     
     func renderedFeedImageData(at index: Int) -> Data? {
@@ -48,6 +48,10 @@ extension ListViewController {
         let ds = tableView.prefetchDataSource
         let index = IndexPath(row: row, section: feedImagesSection)
         ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
+    }
+    
+    func simulateErrorViewTap() {
+        errorView.simulateTap()
     }
     
     @discardableResult
