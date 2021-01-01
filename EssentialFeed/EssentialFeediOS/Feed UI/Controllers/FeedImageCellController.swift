@@ -52,7 +52,7 @@ extension FeedImageCellController: ResourceErrorView {
     }
 }
 
-extension FeedImageCellController: CellController {
+extension FeedImageCellController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
@@ -67,10 +67,16 @@ extension FeedImageCellController: CellController {
         delegate.didRequestImage()
         return cell!
     }
+}
+
+extension FeedImageCellController: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cancelLoad()
     }
+}
+
+extension FeedImageCellController: UITableViewDataSourcePrefetching {
     
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         delegate.didRequestImage()
