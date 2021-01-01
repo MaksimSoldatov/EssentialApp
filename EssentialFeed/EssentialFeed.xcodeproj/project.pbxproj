@@ -439,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				73128678257E084600FCEE69 /* Info.plist */,
+				73EE01CE259F25B9001EE84F /* Shared UI */,
 				73FDA221257F9DBA006193AD /* Feed UI */,
 			);
 			path = EssentialFeediOS;
@@ -599,9 +600,7 @@
 			isa = PBXGroup;
 			children = (
 				7347355125825A0A000FA162 /* UIImageView+Animations.swift */,
-				734735452582590E000FA162 /* UITableView+Dequeueing.swift */,
 				73FDA1F5257F88BE006193AD /* UIView+Shimmering.swift */,
-				7371E95325838287000CC0CF /* UIRefreshControl+Helpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -876,10 +875,45 @@
 			path = EssentialFeedAPIEndToEndTests;
 			sourceTree = "<group>";
 		};
-		73FDA21F257F9D79006193AD /* Controllers */ = {
+		73EE01CE259F25B9001EE84F /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+				73EE01DD259F2621001EE84F /* Helpers */,
+				73EE01CF259F25D2001EE84F /* Controllers */,
+				73EE01DC259F25EE001EE84F /* Views */,
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		73EE01CF259F25D2001EE84F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				731A2DD9257E643600D5D714 /* ListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		73EE01DC259F25EE001EE84F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7371E93F25837D96000CC0CF /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73EE01DD259F2621001EE84F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				73CB81CE258E405300E9FF4A /* UITableView+HeaderSizing.swift */,
+				7371E95325838287000CC0CF /* UIRefreshControl+Helpers.swift */,
+				734735452582590E000FA162 /* UITableView+Dequeueing.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		73FDA21F257F9D79006193AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				7347B3D5257FAA3E00E22E64 /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
@@ -889,8 +923,6 @@
 			isa = PBXGroup;
 			children = (
 				7371E94B258381CC000CC0CF /* Helpers */,
-				73CB81CE258E405300E9FF4A /* UITableView+HeaderSizing.swift */,
-				7371E93F25837D96000CC0CF /* ErrorView.swift */,
 				731A2DE0257E7F8000D5D714 /* FeedImageCell.swift */,
 				73473531258244E6000FA162 /* Feed.storyboard */,
 				734735392582459C000FA162 /* Feed.xcassets */,
