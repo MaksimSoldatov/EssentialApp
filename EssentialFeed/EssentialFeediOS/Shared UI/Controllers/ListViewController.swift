@@ -18,6 +18,7 @@ public final class ListViewController: UITableViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureErrorView()
         refresh()
     }
