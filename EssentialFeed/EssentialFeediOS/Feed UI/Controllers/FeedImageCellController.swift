@@ -67,6 +67,7 @@ extension FeedImageCellController: UITableViewDataSource {
             self?.delegate.didRequestImage()
         }
         delegate.didRequestImage()
+        
         return cell!
     }
 }
