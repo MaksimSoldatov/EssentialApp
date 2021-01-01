@@ -10,7 +10,7 @@ public protocol FeedImageCellControllerDelegate {
     func didCancelImageRequest()
 }
 
-public final class FeedImageCellController: CellController {
+public final class FeedImageCellController: NSObject {
     
     private let viewModel: FeedImageViewModel
     private let delegate: FeedImageCellControllerDelegate
@@ -21,21 +21,7 @@ public final class FeedImageCellController: CellController {
         self.viewModel = viewModel
     }
     
-    public func view(in tableView: UITableView) -> UITableViewCell {
-        cell = tableView.dequeueReusableCell()
-        cell?.locationContainer.isHidden = !viewModel.hasLocation
-        cell?.locationLabel.text = viewModel.location
-        cell?.descriptionLabel.text = viewModel.description
-        cell?.onRetry = delegate.didRequestImage
-        delegate.didRequestImage()
-        return cell!
-    }
-    
-    public func preload() {
-        delegate.didRequestImage()
-    }
-    
-    public func cancelLoad() {
+    private  func cancelLoad() {
         releaseCellForReuse()
         delegate.didCancelImageRequest()
     }
@@ -63,5 +49,34 @@ extension FeedImageCellController: ResourceLoadingView {
 extension FeedImageCellController: ResourceErrorView {
     public func display(_ viewModel: ResourceErrorViewModel) {
         cell?.feedImageRetryButton.isHidden = viewModel.message == nil
+    }
+}
+
+extension FeedImageCellController: CellController {
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        cell = tableView.dequeueReusableCell()
+        cell?.locationContainer.isHidden = !viewModel.hasLocation
+        cell?.locationLabel.text = viewModel.location
+        cell?.descriptionLabel.text = viewModel.description
+        cell?.onRetry = delegate.didRequestImage
+        delegate.didRequestImage()
+        return cell!
+    }
+    
+    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cancelLoad()
+    }
+    
+    public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        delegate.didRequestImage()
+    }
+    
+    public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        cancelLoad()
     }
 }
