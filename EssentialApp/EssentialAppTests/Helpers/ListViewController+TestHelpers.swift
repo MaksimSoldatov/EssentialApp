@@ -19,16 +19,53 @@ extension ListViewController {
         return errorView.message
     }
     
-    func renderedFeedImageData(at index: Int) -> Data? {
-        return simulateFeedImageViewVisible(at: index)?.renderedImage
-    }
-    
     var isShowingLoadingIndicator: Bool {
         return refreshControl?.isRefreshing == true
     }
     
-    func numberOfRenderedFeedImageViews() -> Int {
-        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
+    func simulateErrorViewTap() {
+        errorView.simulateTap()
+    }
+    
+}
+
+extension ListViewController {
+    
+    private var commentsSection: Int {
+        return 0
+    }
+    
+    func numberOfRenderedComments() -> Int {
+        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: commentsSection)
+    }
+    
+    func commentMessage(at row: Int) -> String? {
+        commentView(at: row)?.messageLabel.text
+    }
+    
+    func commentDate(at row: Int) -> String? {
+        commentView(at: row)?.dateLabel.text
+    }
+    
+    func commentUsername(at row: Int) -> String? {
+        commentView(at: row)?.usernameLabel.text
+    }
+    
+    private func commentView(at row: Int) -> ImageCommentCell? {
+        guard numberOfRenderedComments() > row else {
+            return nil
+        }
+        let ds = tableView.dataSource
+        let index = IndexPath(row: row, section: commentsSection)
+        return ds?.tableView(tableView, cellForRowAt: index) as? ImageCommentCell
+    }
+}
+
+
+extension ListViewController {
+    
+    func renderedFeedImageData(at index: Int) -> Data? {
+        return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
     
     func feedImageView(at row: Int) -> UITableViewCell? {
@@ -55,10 +92,6 @@ extension ListViewController {
         ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
     }
     
-    func simulateErrorViewTap() {
-        errorView.simulateTap()
-    }
-    
     @discardableResult
     func simulateFeedImageViewVisible(at index: Int) -> FeedImageCell? {
         return feedImageView(at: index) as? FeedImageCell
@@ -78,4 +111,9 @@ extension ListViewController {
     private var feedImagesSection: Int {
         return 0
     }
+    
+    func numberOfRenderedFeedImageViews() -> Int {
+        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
+    }
+    
 }
