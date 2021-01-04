@@ -6,7 +6,7 @@ import Foundation
 import EssentialFeed
 import EssentialFeediOS
 
-class LoaderSpy: FeedImageDataLoader {
+final class LoaderSpy: FeedImageDataLoader {
     
     // MARK: - FeedLoader
     private var feedRequests = [PassthroughSubject<[FeedImage], Error>]()
