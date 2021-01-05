@@ -163,6 +163,7 @@
 		733BCC4A2589DA0000114C88 /* EssentialApp */ = {
 			isa = PBXGroup;
 			children = (
+				733BCC4D2589DA0000114C88 /* SceneDelegate.swift */,
 				735EF14225921709000C15E8 /* CombineHelpers.swift */,
 				73CB8155258E2D7300E9FF4A /* FeedUIComposer.swift */,
 				732C18C525A0AD4700AB50C2 /* CommentsUIComposer.swift */,
@@ -170,7 +171,6 @@
 				73CB815A258E2D7400E9FF4A /* LoadResourcePresentationAdapter.swift */,
 				73CB8159258E2D7400E9FF4A /* FeedViewAdapter.swift */,
 				733BCC4B2589DA0000114C88 /* AppDelegate.swift */,
-				733BCC4D2589DA0000114C88 /* SceneDelegate.swift */,
 				733BCC542589DA0300114C88 /* Assets.xcassets */,
 				733BCC562589DA0300114C88 /* LaunchScreen.storyboard */,
 				733BCC592589DA0300114C88 /* Info.plist */,
