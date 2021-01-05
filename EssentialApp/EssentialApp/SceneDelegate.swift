@@ -8,29 +8,6 @@ import EssentialFeed
 import EssentialFeedAPI
 import EssentialFeedCache
 
-
-final class NullStore: FeedStore & FeedImageDataStore {
-    func deleteCachedFeed(completion: @escaping DeletionCompletion) {
-        completion(.success(()))
-    }
-    
-    func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
-        completion(.success(()))
-    }
-    
-    func retrieve(completion: @escaping RetrievalCompletion) {
-        completion(.success((.none)))
-    }
-    
-    func insert(_ data: Data, for url: URL, completion: @escaping (InsertionResult) -> Void) {
-        completion(.success(()))
-    }
-    
-    func retrieve(dataForURL url: URL, completion: @escaping (FeedImageDataStore.RetrievalResult) -> Void) {
-        completion(.success(.none))
-    }
-}
-
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
@@ -42,9 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private lazy var baseURL = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed")!
 
     private lazy var store: FeedStore & FeedImageDataStore = {
-        try! CoreDataFeedStore(storeURL: NSPersistentContainer
-                                .defaultDirectoryURL()
-                                .appendingPathComponent("feed-store.sqlite"))
+        do {
+            return try CoreDataFeedStore(
+                storeURL: NSPersistentContainer
+                    .defaultDirectoryURL()
+                    .appendingPathComponent("feed-store.sqlite"))
+        } catch {
+            return NullStore()
+        }
     }()
     
     private lazy var localFeedLoader: LocalFeedLoader = {
