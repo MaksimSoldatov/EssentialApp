@@ -70,6 +70,11 @@ public final class ListViewController: UITableViewController {
         snapshot.appendItems(cellControllers, toSection: 0)
         dataSource.apply(snapshot)
     }
+    
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let delegate = cellController(at: indexPath)?.delegate
+        delegate?.tableView?(tableView, didSelectRowAt: indexPath)
+    }
         
     public override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let delegate = cellController(at: indexPath)?.delegate

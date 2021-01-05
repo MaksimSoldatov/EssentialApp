@@ -59,10 +59,19 @@ extension ListViewController {
         let index = IndexPath(row: row, section: commentsSection)
         return ds?.tableView(tableView, cellForRowAt: index) as? ImageCommentCell
     }
+    
+    
 }
 
 
 extension ListViewController {
+    
+    func simulateTapOnFeedImage(at row: Int) {
+        let delegate = tableView.delegate
+        let index = IndexPath(row: row, section: feedImagesSection)
+        
+        delegate?.tableView?(tableView, didSelectRowAt: index)
+    }
     
     func renderedFeedImageData(at index: Int) -> Data? {
         return simulateFeedImageViewVisible(at: index)?.renderedImage
