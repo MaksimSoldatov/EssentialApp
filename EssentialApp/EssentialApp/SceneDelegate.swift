@@ -1,6 +1,7 @@
 //
 //  Created by Maksim Soldatov on 16.12.20.
 //
+import os
 import UIKit
 import CoreData
 import Combine
@@ -16,6 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
     }()
     
+    private lazy var logger = Logger(subsystem: "com.maxim.soldatov.EssentialApp", category: "nain")
+    
     private lazy var baseURL = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed")!
 
     private lazy var store: FeedStore & FeedImageDataStore = {
@@ -26,6 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     .appendingPathComponent("feed-store.sqlite"))
         } catch {
             assertionFailure("Failed to instantiate CoreData store wit error: \(error.localizedDescription)")
+            
+            logger.fault("Failed to instantiate CoreData store wit error: \(error.localizedDescription)")
             return NullStore()
         }
     }()

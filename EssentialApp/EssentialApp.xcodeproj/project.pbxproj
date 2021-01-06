@@ -517,12 +517,12 @@
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = CF3B3QT65H;
 				INFOPLIST_FILE = EssentialApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.007.1;
+				MARKETING_VERSION = 1.08;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxim.soldatov.EssentialApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -542,12 +542,12 @@
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = CF3B3QT65H;
 				INFOPLIST_FILE = EssentialApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.007.1;
+				MARKETING_VERSION = 1.08;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxim.soldatov.EssentialApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = new_profile;
