@@ -15,7 +15,6 @@ public final class FeedImageCellController: NSObject {
     private let viewModel: FeedImageViewModel
     private let delegate: FeedImageCellControllerDelegate
     private let selection: () -> Void
-    
     private var cell: FeedImageCell?
     
     public init(viewModel: FeedImageViewModel, delegate: FeedImageCellControllerDelegate, selection: @escaping () -> Void) {
