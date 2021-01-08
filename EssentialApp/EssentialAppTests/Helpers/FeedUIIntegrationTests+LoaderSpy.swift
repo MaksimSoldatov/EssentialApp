@@ -4,25 +4,26 @@
 import Combine
 import Foundation
 import EssentialFeed
+import EssentialFeedAPI
 import EssentialFeediOS
 
 final class LoaderSpy: FeedImageDataLoader {
     
     // MARK: - FeedLoader
-    private var feedRequests = [PassthroughSubject<[FeedImage], Error>]()
+    private var feedRequests = [PassthroughSubject<Paginated<FeedImage>, Error>]()
 
     var loadFeedCallCount: Int {
         return feedRequests.count
     }
     
-    func loadPublisher() -> AnyPublisher<[FeedImage], Error> {
-        let publisher = PassthroughSubject<[FeedImage], Error>()
+    func loadPublisher() -> AnyPublisher<Paginated<FeedImage>, Error> {
+        let publisher = PassthroughSubject<Paginated<FeedImage>, Error>()
         feedRequests.append(publisher)
         return publisher.eraseToAnyPublisher()
     }
     
     func completeFeedLoading(with feed: [FeedImage] = [], at index: Int = 0) {
-        feedRequests[index].send(feed)
+        feedRequests[index].send(Paginated(items: feed))
         feedRequests[index].send(completion: .finished)
     }
     
