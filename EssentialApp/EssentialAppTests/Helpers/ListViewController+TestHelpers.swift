@@ -141,6 +141,12 @@ extension ListViewController {
     }
     
     var loadMoreFeedErrorMessage: String? {
-         return loadMoreFeedCell()?.message
-     }
+        return loadMoreFeedCell()?.message
+    }
+    
+    func simulateTapOnLoadMoreFeedError() {
+        let delegate = tableView.delegate
+        let index = IndexPath(row: 0, section: feedLoadMoreSection)
+        delegate?.tableView?(tableView, didSelectRowAt: index)
+    }
 }
