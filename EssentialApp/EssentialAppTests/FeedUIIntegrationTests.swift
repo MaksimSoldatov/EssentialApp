@@ -202,6 +202,21 @@ class FeedUIIntegrationTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     
+    func test_loadMoreCompletion_rendersErrorMessageOnError() {
+           let (sut, loader) = makeSUT()
+           sut.loadViewIfNeeded()
+           loader.completeFeedLoading()
+
+           sut.simulateLoadMoreFeedAction()
+           XCTAssertEqual(sut.loadMoreFeedErrorMessage, nil)
+
+           loader.completeLoadMoreWithError()
+           XCTAssertEqual(sut.loadMoreFeedErrorMessage, loadError)
+
+           sut.simulateLoadMoreFeedAction()
+           XCTAssertEqual(sut.loadMoreFeedErrorMessage, nil)
+       }
+    
     func test_loadFeedCompletion_rendersErrorMessageOnErrorUntilNextReload() {
         let (sut, loader) = makeSUT()
         

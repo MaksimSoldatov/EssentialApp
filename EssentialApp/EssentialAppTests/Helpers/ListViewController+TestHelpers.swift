@@ -30,7 +30,6 @@ extension ListViewController {
     func simulateErrorViewTap() {
         errorView.simulateTap()
     }
-    
 }
 
 extension ListViewController {
@@ -141,4 +140,7 @@ extension ListViewController {
         tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
     }
     
+    var loadMoreFeedErrorMessage: String? {
+         return loadMoreFeedCell()?.message
+     }
 }
