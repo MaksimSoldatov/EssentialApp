@@ -44,7 +44,7 @@ final class FeedSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark, contentSize: .extraExtraExtraLarge)), named: "FEED_WITH_LOAD_MORE_INDICATOR_dark_extraExtraExtraLarge")
     }
     
-    func test_feedWithloadMoreError() {
+    func test_feedWithLoadMoreError() {
         let sut = makeSUT()
         
         sut.display(feedWithLoadMoreError())
