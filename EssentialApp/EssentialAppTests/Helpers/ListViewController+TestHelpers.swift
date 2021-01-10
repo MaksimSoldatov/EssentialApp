@@ -68,6 +68,14 @@ extension ListViewController {
 
 extension ListViewController {
     
+    var isShowingLoadMoreFeedIndicator: Bool {
+        return loadMoreFeedCell()?.isLoading == true
+    }
+    
+    private func loadMoreFeedCell() -> LoadMoreCell? {
+        return cell(row: 0, section: feedLoadMoreSection) as? LoadMoreCell
+    }
+    
     func simulateTapOnFeedImage(at row: Int) {
         let delegate = tableView.delegate
         let index = IndexPath(row: row, section: feedImagesSection)
