@@ -32,17 +32,17 @@ final class FeedSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark, contentSize: .extraExtraExtraLarge)), named: "FEED_WITH_FAILED_IMAGE_LOADING_dark_extraExtraExtraLarge")
     }
     
-    func test_feedWithLoadMoreIndicator() {
-        let sut = makeSUT()
-        
-        sut.display(feedWithLoadMoreIndicator())
-        
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "FEED_WITH_LOAD_MORE_INDICATOR_light")
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "FEED_WITH_LOAD_MORE_INDICATOR_dark")
-        
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light, contentSize: .extraExtraExtraLarge)), named: "FEED_WITH_LOAD_MORE_INDICATOR_light_extraExtraExtraLarge")
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark, contentSize: .extraExtraExtraLarge)), named: "FEED_WITH_LOAD_MORE_INDICATOR_dark_extraExtraExtraLarge")
-    }
+//    func test_feedWithLoadMoreIndicator() {
+//        let sut = makeSUT()
+//        
+//        sut.display(feedWithLoadMoreIndicator())
+//        
+//        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "FEED_WITH_LOAD_MORE_INDICATOR_light")
+//        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "FEED_WITH_LOAD_MORE_INDICATOR_dark")
+//        
+//        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light, contentSize: .extraExtraExtraLarge)), named: "FEED_WITH_LOAD_MORE_INDICATOR_light_extraExtraExtraLarge")
+//        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark, contentSize: .extraExtraExtraLarge)), named: "FEED_WITH_LOAD_MORE_INDICATOR_dark_extraExtraExtraLarge")
+//    }
     
     func test_feedWithLoadMoreError() {
         let sut = makeSUT()
