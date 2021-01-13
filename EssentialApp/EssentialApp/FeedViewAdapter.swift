@@ -3,29 +3,89 @@
 //
 import UIKit
 import EssentialFeed
+import EssentialFeedAPI
 import EssentialFeediOS
 import EssentialFeedPresentation
 
-final class FeedViewAdapter: FeedView {
+final class FeedViewAdapter: ResourceView {
     
-    private weak var controller: FeedViewController?
-    private let imageLoader: FeedImageDataLoader
+    private weak var controller: ListViewController?
+    private let imageLoader: (URL) -> FeedImageDataLoader.Publisher
+    private let selection: (FeedImage) -> Void
+    private let currentFeed: [FeedImage: CellController]
     
-    init(controller: FeedViewController, imageLoader: FeedImageDataLoader) {
+    private typealias ImageDataPresentationAdapter = LoadResourcePresentationAdapter<Data, WeakRefVirtualProxy<FeedImageCellController>>
+    private typealias LoadMorePresentationAdapter = LoadResourcePresentationAdapter<Paginated<FeedImage>, FeedViewAdapter>
+    
+    init(
+        currentFeed: [FeedImage: CellController] = [:],
+        controller: ListViewController?,
+        imageLoader: @escaping (URL) -> FeedImageDataLoader.Publisher,
+        selection: @escaping (FeedImage) -> Void ) {
+        self.currentFeed = currentFeed
         self.controller = controller
         self.imageLoader = imageLoader
+        self.selection = selection
     }
     
-    func display(_ viewModel: FeedViewModel) {
-        controller?.display(viewModel.feed.map { model in
-            let adapter = FeedImageDataLoaderPresentationAdapter<WeakRefVirtualProxy<FeedImageCellController>, UIImage>(model: model, imageLoader: imageLoader)
-            let view = FeedImageCellController(delegate: adapter)
+    func display(_ viewModel: Paginated<FeedImage>) {
+        guard let controller = controller else { return }
+        var currentFeed = self.currentFeed
+        let feed: [CellController] = viewModel.items.map { model in
             
-            adapter.presenter = FeedImagePresenter(
-                view: WeakRefVirtualProxy(view),
-                imageTransformer: UIImage.init)
+            if let controller = currentFeed[model] {
+                return controller
+            }
             
-            return view
-        })
+            let adapter = ImageDataPresentationAdapter(loader: { [imageLoader] in
+                imageLoader(model.url)
+            })
+            
+            let view = FeedImageCellController(
+                viewModel: FeedImagePresenter.map(model),
+                delegate: adapter,
+                selection: { [selection] in
+                    selection(model)
+                })
+            
+            adapter.presenter = LoadResourcePresenter(
+                resourceView: WeakRefVirtualProxy(view),
+                loadingView: WeakRefVirtualProxy(view),
+                errorView: WeakRefVirtualProxy(view),
+                mapper: { data in
+                    guard let image = UIImage(data: data) else {
+                        throw InvalidImageData()
+                    }
+                    return image
+                })
+            
+            let controller = CellController(id: model, view)
+            currentFeed[model] = controller
+            return controller
+        }
+        guard let loadMorePublisher = viewModel.loadMorePublisher else {
+            controller.display(feed)
+            return
+        }
+        
+        let loadMoreAdapter = LoadMorePresentationAdapter(loader: loadMorePublisher)
+        
+        let loadMore = LoadMoreCellController(callback: loadMoreAdapter.loadResource )
+        
+        loadMoreAdapter.presenter = LoadResourcePresenter(
+            resourceView: FeedViewAdapter(currentFeed: currentFeed,
+                                          controller: controller,
+                                          imageLoader: imageLoader,
+                                          selection: selection),
+            loadingView: WeakRefVirtualProxy(loadMore),
+            errorView: WeakRefVirtualProxy(loadMore),
+            mapper: { $0 })
+        
+       
+        let loadMoreSection = [CellController(id: UUID(), loadMore)]
+        
+        controller.display(feed, loadMoreSection)
     }
 }
+
+private struct InvalidImageData: Error {}

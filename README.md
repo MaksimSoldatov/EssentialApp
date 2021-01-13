@@ -15,7 +15,7 @@ The application is divided into the following modules, some of which are platfor
 - Essential App - application module. Contain composition logic.
 
 This approach demonstrates a flexible architecture that makes the code extensible.<br>
-Multimodularity is illustrated in the picture below. 
+Multi-modularity is illustrated in the picture below. 
 
 #### Test coverage:<br>
 All application modules are tested by using **unit tests**;<br>
@@ -31,6 +31,8 @@ It also triggers the job to deploy the build result in **TestFlight**.
 #### Features:
 1. Localization on 3 languages
 2. Dark / light mode
+3. Support accessibility fonts 
+4. Prefetching cells
 
 ## App Architecture
 ![App Architecture](./pictures/architecture_overview.png)
