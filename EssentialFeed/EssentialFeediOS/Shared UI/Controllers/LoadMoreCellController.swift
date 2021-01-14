@@ -14,7 +14,6 @@ public final class LoadMoreCellController: NSObject {
         self.callback = callback
     }
     
-    
     private func reloadIfNeeded() {
         guard !cell.isLoading else { return }
         callback()
