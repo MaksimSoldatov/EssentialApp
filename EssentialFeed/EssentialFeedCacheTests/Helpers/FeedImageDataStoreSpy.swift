@@ -7,9 +7,6 @@ import EssentialFeedCache
 
 final class FeedImageDataStoreSpy: FeedImageDataStore {
     
-    func retrieve(dataForURL url: URL, completion: @escaping (RetrievalResult) -> Void) {}
-    func insert(_ data: Data, for url: URL, completion: @escaping (InsertionResult) -> Void) {}
-    
     enum Message: Equatable {
         case insert(data: Data, for: URL)
         case retrieve(dataFor: URL)
